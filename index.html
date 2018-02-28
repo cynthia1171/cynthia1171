@@ -5,53 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Portafolio</title>
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="assets/icomoon/style.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header>
+    
+  <a class="icon-arrow-up ir-arriba btn-floating red"></a>
+  <header class="navbar-fixed">
     <nav>
-      <div class="nav-wrapper">
-        <div class="container">
+      <div class="container">
+        <div class="nav-wrapper">
           <a href="#!" class="brand-logo">Logo</a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse">
-            <i class="material-icons">menu</i>
-          </a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><span class="icon-menu"></span></a>
           <ul class="right hide-on-med-and-down">
-            <li>
-              <a href="#">Inicio</a>
-            </li>
-            <li>
-              <a href="#">Acerca de mí</a>
-            </li>
-            <li>
-              <a href="#">Habilidades</a>
-            </li>
-            <li>
-              <a href="#">Proyectos</a>
-            </li>
-            <li>
-              <a href="#">Contacto</a>
-            </li>
+            <li><a href="#about">Acerca de mí</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#proyect">Proyectos</a></li>
+            <li><a href="#contact">Contacto</a></li>
           </ul>
           <ul class="side-nav" id="mobile-demo">
-            <li>
-              <a href="#">Inicio</a>
-            </li>
-            <li>
-              <a href="#">Acerca de mí</a>
-            </li>
-            <li>
-              <a href="#">Habilidades</a>
-            </li>
-            <li>
-              <a href="#">Proyectos</a>
-            </li>
-            <li>
-              <a href="#">Contacto</a>
-            </li>
+            <li><a href="#about">Acerca de mí</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#proyect">Proyectos</a></li>
+            <li><a href="#contact">Contacto</a></li>
           </ul>
         </div>
       </div>
@@ -60,7 +37,7 @@
   <!-- fin header -->
 
   <!-- inicio slider -->
-  <section>
+  <section id="slider" class="section scrollspy">
     <div class="row">
       <div class="parallax-container">
         <div class="parallax"><img src="assets/img/slider.jpg"></div>
@@ -70,15 +47,15 @@
   <!-- fin slider -->
 
   <!-- seccion about -->
-  <section>
+  <section id="about" class="section scrollspy">
     <div class="container">
       <div class="row">
-        <h3>Acerca de mí</h3>
         <div id="myimg" class="col s12 m6 l6">
-          <img src="assets/img/myimg.jpeg" alt="">
+          <h4>Acerca de mí</h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam molestiae vel, dignissimos tempore dolor eius hic natus voluptatibus, possimus voluptatem eligendi porro, quo vitae perferendis libero! Ab quo dignissimos rem.</p>
         </div>
         <div id="mytext" class="col s12 m6 l6">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam molestiae vel, dignissimos tempore dolor eius hic natus voluptatibus, possimus voluptatem eligendi porro, quo vitae perferendis libero! Ab quo dignissimos rem.</p>
+          <img src="assets/img/myimg.jpeg" alt="">
         </div>
       </div>
     </div>
@@ -86,10 +63,12 @@
   <!-- fin seccion about -->
 
   <!-- seccion habilidades -->
-  <section>
+  <section id="skills" class="section scrollspy">
     <div class="container">
       <div class="row">
-        <h3>Habilidades</h3>
+        <div>
+          <h4>Habilidades</h4>
+        </div>
         <div class="col s6 m4 l4">
           <img class="img-skills" src="assets/img/HTML5-logo.png" alt="">
         </div>
@@ -123,10 +102,12 @@
   <!-- fin seccion habilidades -->
 
   <!-- seccion proyectos -->
-  <section>
+  <section id="proyect" class="section scrollspy">
     <div class="container">
       <div class="row">
-        <h3>Proyectos</h3>
+        <div>
+          <h4>Proyectos</h4>
+        </div>
         <div>
           <div class="col s12 m4 l4">
             <div class="card">
@@ -233,6 +214,32 @@
     </div>
   </section>
   <!-- fin seccion proyectos -->
+
+  <!-- seccion contacto -->
+  <section id="contact" class="section scrollspy">
+    <div class="row">
+        <div class="col s12 m12 l12 center-align">
+          <h3>Estoy lista para trabajar!</h3>
+          <p>Contactate conmigo a través de estos medios:</p>
+          <a href="mailto:c.isla1171@gmail.com"><span class="icon-envelop"></span></a>
+          <a href="https://github.com/cynthia1171" target="_blank"><span class="icon-github"></span></a>
+          <a href="www.linkedin.com/in/cynthiaisla" target="_blank"><span class="icon-linkedin"></span></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m12 l12 center-align">
+            <h4>Descarga mi CV</h4>
+            <a href="#"><span class="icon-cloud-download"></span></a>
+          </div>
+    </div>
+  </section>
+  <!-- fin seccion contacto -->
+
+  <!-- inicio footer -->
+  <footer>
+    
+  </footer>
+  <!-- fin footer -->
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
