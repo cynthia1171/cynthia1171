@@ -1,0 +1,9 @@
+.img-skills {
+    width: 100px;
+    height: 100px;
+}
+
+.card .card-image {
+    opacity: 0.5;
+  filter:  alpha(opacity=50);
+}
