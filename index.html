@@ -21,8 +21,8 @@
             <a href="#" data-activates="slide-out" class="button-collapse">
               <i class="material-icons">menu</i>
             </a>
-            <a href="#" class="brand-logo">
-              <img src="assets/img/logo.png" alt="">
+            <a href="#" class="brand-logo logo">
+              <img class="responsive-img" src="assets/img/logo.png" alt="">
             </a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
               <li>
@@ -71,14 +71,19 @@
 
   <!-- seccion about -->
   <section id="about" class="section scrollspy">
-    <div class="container">
-      <div class="row rotator" data-rotate-x="90deg" data-move-z="-500px" data-move-y="200px">
+    <div class="container contenedor">
+      <div class="row">
         <div id="mytext" class="col s12 m6 l6">
           <h4>Acerca de mí</h4>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam molestiae vel, dignissimos tempore dolor eius hic natus voluptatibus, possimus voluptatem eligendi porro, quo vitae perferendis libero! Ab quo dignissimos rem.</p>
+          <p>Soy Cynthia Isla, tengo 29 años, vivo en Santiago, me encantan los videos juegos y ver series :) y
+            soy una Frontend Developer apasionada por lo que hace, comprometida, orientada al logro de objetivos y proactiva. Me encantan
+          los desafíos, sobretodo cuando se tratan de adquirir nuevos conocimientos, a los que me aboco por completo aprendiendo con
+          rapidéz.</p>
         </div>
         <div id="myimg" class="col s12 m6 l6">
-          <img src="assets/img/myimg.jpeg" class="responsive-img circle" alt="">
+          <div class="container">
+            <img src="assets/img/myimg.jpeg" class="responsive-img circle" alt="">
+          </div>
         </div>
       </div>
     </div>
@@ -87,40 +92,54 @@
 
   <!-- seccion habilidades -->
   <section id="skills" class="section scrollspy">
-    <div class="container rotator" data-rotate-x="90deg" data-move-z="500px" data-move-y="200px">
+    <div class="container">
       <div class="row">
-        <div>
+        <div id="titulo">
           <h4>Habilidades</h4>
         </div>
-        <div class="col s6 m4 l4">
-          <img class="img-skills responsive-img" src="assets/img/HTML5-logo.png" alt="">
+        <div class="col s4 m4 l4">
+          <div class="container">
+            <img id="html" class="img-skills responsive-img" src="assets/img/HTML5-logo.png" alt="">
+          </div>
         </div>
-        <div class="col s6 m4 l4">
-          <img class="img-skills responsive-img" src="assets/img/CSS3-logo.png" alt="">
+        <div class="col s4 m4 l4">
+          <div class="container">
+            <img id="css" class="img-skills responsive-img" src="assets/img/CSS3-logo.png" alt="">
+          </div>
         </div>
-        <div class="col s6 m4 l4">
-          <img class="img-skills responsive-img" src="assets/img/js-logo.png" alt="">
+        <div class="col s4 m4 l4">
+          <div class="container">
+            <img id="js" class="img-skills responsive-img" src="assets/img/js-logo.png" alt="">
+          </div>
         </div>
       </div>
       <div class="row">
-        <div class="col s6 m4 l4">
-          <img class="img-skills responsive-img" src="assets/img/jquery-logo.png" alt="">
+        <div class="col s4 m4 l4">
+          <div class="container">
+            <img id="jquery" class="img-skills responsive-img" src="assets/img/jquery-logo.png" alt="">
+          </div>
         </div>
-        <div class="col s6 m4 l4">
-          <img class="img-skills responsive-img" src="assets/img/bootstrap-logo.png" alt="">
+        <div class="col s4 m4 l4">
+          <div class="container">
+            <img id="bootstrap" class="img-skills responsive-img" src="assets/img/bootstrap-logo.png" alt="">
+          </div>
         </div>
-        <div class="col s6 m4 l4">
-          <img class="img-skills responsive-img" src="assets/img/materialize-logo.png" alt="">
+        <div class="col s4 m4 l4">
+          <div class="container">
+            <img id="materialize" class="img-skills responsive-img" src="assets/img/materialize-logo.png" alt="">
+          </div>
         </div>
       </div>  
       <div class="row">  
-        <div class="col s6 m4 l4">
-          <img class="img-skills responsive-img" src="assets/img/sass-logo.png" alt="">
+        <div class="col s4 m4 l4">
+          <div class="container">
+            <img id="sass" class="img-skills responsive-img" src="assets/img/sass-logo.png" alt="">
+          </div>
         </div>
-        <div class="col s6 m4 l4">
+        <div class="col s4 m4 l4">
           <!-- <img class="img-skills responsive-img" src="assets/img/react-logo.png" alt=""> -->
         </div>
-        <div class="col s6 m4 l4">
+        <div class="col s4 m4 l4">
           <!-- <img class="img-skills responsive-img" src="assets/img/angular-logo.png" alt=""> -->
         </div>
       </div>
@@ -137,58 +156,56 @@
         </div>
         <div>
           <div class="col s12 m4 l4">
-            <div class="card rotator" data-rotate-y="270deg" data-move-x="-150%">
+            <div class="card">
               <div class="card-image">
-                <img src="assets/img/ejemplo.gif">
-                <span class="card-title">Card Title</span>
+                <img src="assets/img/portfolio/trivia.png">
+                <span class="card-title">Trivia</span>
               </div>
               <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+                <p>Juego de trivia hecho con API de Open Trivia DB y Sass </p>
               </div>
               <div class="card-action">
-                <a href="#">This is a link</a>
+                <a href="https://cynthia1171.github.io/trivia/">Link del proyecto</a>
               </div>
             </div>
           </div>
         </div>
         <div>
           <div class="col s12 m4 l4">
-            <div class="card rotator" data-rotate-y="270deg" data-move-x="100%">
+            <div class="card">
               <div class="card-image">
-                <img class="responsive-img" src="assets/img/ejemplo.gif">
-                <span class="card-title">Card Title</span>
+                <img class="responsive-img" src="assets/img/portfolio/lab-car.png">
+                <span class="card-title">Lab-car</span>
               </div>
               <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
+                <p>Web hecha con Bootstrap 3.</p>
               </div>
               <div class="card-action">
-                <a href="#">This is a link</a>
+                <a href="https://cynthia1171.github.io/lab-car-boilerplate/">Link del proyecto</a>
               </div>
             </div>
           </div>
         </div>
         <div>
           <div class="col s12 m4 l4">
-            <div class="card rotator" data-rotate-y="270deg" data-move-x="150%">
+            <div class="card">
               <div class="card-image">
-                <img class="responsive-img" src="assets/img/ejemplo.gif">
-                <span class="card-title">Card Title</span>
+                <img class="responsive-img" src="assets/img/portfolio/spa.png">
+                <span class="card-title">Dobby Spa</span>
               </div>
               <div class="card-content">
                 <p>I am a very simple card. I am good at containing small bits of information.
                 I am convenient because I require little markup to use effectively.</p>
               </div>
               <div class="card-action">
-                <a href="#">This is a link</a>
+                <a href="https://cynthia1171.github.io/dobby-spa/">Link del proyecto</a>
               </div>
             </div>
           </div>
         </div>
         <div>
             <div class="col s12 m4 l4">
-                <div class="card rotator" data-rotate-y="270deg" data-move-x="-150%"> 
+                <div class="card"> 
                   <div class="card-image">
                     <img class="responsive-img" src="assets/img/ejemplo.gif">
                     <span class="card-title">Card Title</span>
@@ -205,7 +222,7 @@
         </div>
         <div>
           <div class="col s12 m4 l4">
-            <div class="card rotator" data-rotate-y="270deg" data-move-x="100%">
+            <div class="card">
               <div class="card-image">
                 <img class="responsive-img" src="assets/img/ejemplo.gif">
                 <span class="card-title">Card Title</span>
@@ -222,7 +239,7 @@
         </div>
         <div>
           <div class="col s12 m4 l4">
-            <div class="card rotator" data-rotate-y="270deg" data-move-x="150%">
+            <div class="card">
               <div class="card-image">
                 <img class="responsive-img" src="assets/img/ejemplo.gif">
                 <span class="card-title">Card Title</span>
@@ -250,13 +267,13 @@
           <p>Contactate conmigo a través de estos medios:</p>
           <a href="mailto:c.isla1171@gmail.com"><span class="icon-envelop"></span></a>
           <a href="https://github.com/cynthia1171" target="_blank"><span class="icon-github"></span></a>
-          <a href="www.linkedin.com/in/cynthiaisla" target="_blank"><span class="icon-linkedin"></span></a>
+          <a href="http://linkedin.com/in/cynthiaisla" target="_blank"><span class="icon-linkedin"></span></a>
         </div>
     </div>
     <div class="row">
         <div class="col s12 m12 l12 center-align">
-            <h4>Descarga mi CV</h4>
-            <a href="#"><span class="icon-cloud-download"></span></a>
+            <h4>Ver mi CV</h4>
+            <a href="assets/cv/CynthiaIsla-Frontend.pdf"><span class="icon-cloud-download"></span></a>
           </div>
     </div>
   </section>
