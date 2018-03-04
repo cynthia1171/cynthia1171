@@ -6,33 +6,56 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Portafolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="assets/icomoon/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    
   <a class="icon-arrow-up ir-arriba btn-floating red"></a>
-  <header class="navbar-fixed">
-    <nav>
-      <div class="container">
-        <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">Logo</a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><span class="icon-menu"></span></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="#about">Acerca de mí</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#proyect">Proyectos</a></li>
-            <li><a href="#contact">Contacto</a></li>
-          </ul>
-          <ul class="side-nav" id="mobile-demo">
-            <li><a href="#about">Acerca de mí</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#proyect">Proyectos</a></li>
-            <li><a href="#contact">Contacto</a></li>
-          </ul>
+  <header>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#" data-activates="slide-out" class="button-collapse">
+              <i class="material-icons">menu</i>
+            </a>
+            <a href="#" class="brand-logo">
+              <img src="assets/img/logo.png" alt="">
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li>
+                <a href="#about">Acerca de mí</a>
+              </li>
+              <li>
+                <a href="#skills">Habilidades</a>
+              </li>
+              <li>
+                <a href="#proyect">Projectos</a>
+              </li>
+              <li>
+                <a href="#contact">Contacto</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
+    <ul id="slide-out" class="side-nav">
+      <li>
+        <a href="#about">Acerca de mí</a>
+      </li>
+      <li>
+        <a href="#skills">Habilidades</a>
+      </li>
+      <li>
+        <a href="#proyect">Projectos</a>
+      </li>
+      <li>
+        <a href="#contact">Contacto</a>
+      </li>
+    </ul>
   </header>
   <!-- fin header -->
 
@@ -241,12 +264,14 @@
 
   <!-- inicio footer -->
   <footer>
-    
+    <div class="container center-align">
+      <h6>Desarrollado por Cynthia Isla | Laboratoria <span id="year"></span></h6>
+    </div>
   </footer>
   <!-- fin footer -->
 
   <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script src="assets/js/smoove.js"></script>
   <script src="assets/js/app.js"></script>

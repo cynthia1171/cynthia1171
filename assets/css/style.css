@@ -1,3 +1,7 @@
+body {
+  font-family: 'Comfortaa', cursive;
+}
+
 .ir-arriba {
 	display:none;
 	padding:10px;
@@ -9,6 +13,19 @@
 	right:35px;
 }
 
+nav {
+  background-color: #ff6b6b !important;
+}
+
+.brand-logo img {
+  width: 15%;
+  margin-top: 2%;
+}
+
+li:hover {
+  background-color: #c44d58!important;
+}
+
 #slider {
   width: 100%;
   height: 100vh;
@@ -17,10 +34,6 @@
 .parallax-container {
   height: 100vh;
   margin-top: -15px;
-}
-
-#fondo {
-
 }
 
 .gif {
@@ -40,18 +53,18 @@
   width: 100%;
   height: 100vh;
   padding-top: 8rem;
-  background-color: #4ecdc4;
+  background-color: #c7f464;
 }
 
 #skills {
   width: 100%;
-  height: 100vh;
+  height: auto;
   padding-top: 8rem;
 }
 
 #proyect {
   width: 100%;
-  height: 180vh;
+  height: auto;
   padding-top: 8rem;
   background-color: #c7f463;
 }
@@ -62,7 +75,7 @@
   padding-top: 8rem;
 }
 
-.icon-arrow-up:before {
+.icon-arrow-up {
   content: "\ea32";
 }
 
@@ -76,30 +89,58 @@
   filter:  alpha(opacity=50);
 }
 
-.icon-envelop:before {
+.icon-envelop {
   content: "\e945";
   font-size: 3em;
-  color: blueviolet;
+  color: #4ecdc4;
   padding: 1em;
 }
 
-.icon-github:before {
+.icon-envelop:hover {
+  color: #556270;
+}
+
+.icon-github {
   content: "\eab0";
   font-size: 3em;
-  color: blueviolet;
+  color: #4ecdc4;
   padding: 1em;
 }
 
-.icon-linkedin:before {
+.icon-github:hover {
+  color: #556270;
+}
+
+.icon-linkedin {
   content: "\eac9";
   font-size: 3em;
-  color: blueviolet;
+  color: #4ecdc4;
   padding: 1em;
 }
 
-.icon-cloud-download:before {
+.icon-linkedin:hover {
+  color: #556270;
+}
+
+.icon-cloud-download {
   content: "\e9c2";
   font-size: 3em;
-  color: blueviolet;
+  color: #4ecdc4;
   padding: 1em;
+}
+
+.icon-cloud-download:hover {
+  color: #556270;
+}
+
+footer {
+  height: 100px;
+  width: 100%;
+  background-color: #ff6b6b;
+}
+
+footer div {
+  padding-top: 2em;
+  color: #fff;
+  font-weight: 400;
 }

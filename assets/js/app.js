@@ -1,10 +1,14 @@
 $(document).ready(function(){
+  $('.button-collapse').sideNav({
+    menuWidth: 170,
+    edge: 'left',
+    closeOnClick: true,
+    draggable: true
+  });
   $('.parallax').parallax();
   $('.rotator').smoove({
     offset:'40%'
   });
-
-  $('.button-collapse').sideNav();
   $('.scrollspy').scrollSpy();
 
   $('.ir-arriba').click(function(){
@@ -34,4 +38,9 @@ $(document).ready(function(){
       }
     });
   });
+
+  var year = document.getElementById('year')
+  copyright = new Date();
+  update = copyright.getFullYear();
+  year.innerHTML = update;
 });
