@@ -1,6 +1,10 @@
 $(document).ready(function(){
-  $('.button-collapse').sideNav();
   $('.parallax').parallax();
+  $('.rotator').smoove({
+    offset:'40%'
+  });
+
+  $('.button-collapse').sideNav();
   $('.scrollspy').scrollSpy();
 
   $('.ir-arriba').click(function(){
@@ -11,9 +15,9 @@ $(document).ready(function(){
  
 	$(window).scroll(function(){
 		if( $(this).scrollTop() > 0 ){
-			$('.ir-arriba').slideDown(500);
+			$('.ir-arriba').slideDown(100);
 		} else {
-			$('.ir-arriba').slideUp(500);
+			$('.ir-arriba').slideUp(100);
 		}
   });
   

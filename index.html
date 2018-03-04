@@ -40,7 +40,7 @@
   <section id="slider" class="section scrollspy">
     <div class="row">
       <div class="parallax-container">
-        <div class="parallax"><img src="assets/img/slider.jpg"></div>
+        <div class="parallax"><img src="assets/img/fondo.gif"></div>
       </div>
     </div>
   </section>
@@ -49,13 +49,13 @@
   <!-- seccion about -->
   <section id="about" class="section scrollspy">
     <div class="container">
-      <div class="row">
-        <div id="myimg" class="col s12 m6 l6">
+      <div class="row rotator" data-rotate-x="90deg" data-move-z="-500px" data-move-y="200px">
+        <div id="mytext" class="col s12 m6 l6">
           <h4>Acerca de mí</h4>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam molestiae vel, dignissimos tempore dolor eius hic natus voluptatibus, possimus voluptatem eligendi porro, quo vitae perferendis libero! Ab quo dignissimos rem.</p>
         </div>
-        <div id="mytext" class="col s12 m6 l6">
-          <img src="assets/img/myimg.jpeg" alt="">
+        <div id="myimg" class="col s12 m6 l6">
+          <img src="assets/img/myimg.jpeg" class="responsive-img circle" alt="">
         </div>
       </div>
     </div>
@@ -64,37 +64,41 @@
 
   <!-- seccion habilidades -->
   <section id="skills" class="section scrollspy">
-    <div class="container">
+    <div class="container rotator" data-rotate-x="90deg" data-move-z="500px" data-move-y="200px">
       <div class="row">
         <div>
           <h4>Habilidades</h4>
         </div>
         <div class="col s6 m4 l4">
-          <img class="img-skills" src="assets/img/HTML5-logo.png" alt="">
+          <img class="img-skills responsive-img" src="assets/img/HTML5-logo.png" alt="">
         </div>
         <div class="col s6 m4 l4">
-          <img class="img-skills" src="assets/img/CSS3-logo.png" alt="">
+          <img class="img-skills responsive-img" src="assets/img/CSS3-logo.png" alt="">
         </div>
         <div class="col s6 m4 l4">
-          <img class="img-skills" src="assets/img/js-logo.png" alt="">
+          <img class="img-skills responsive-img" src="assets/img/js-logo.png" alt="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s6 m4 l4">
+          <img class="img-skills responsive-img" src="assets/img/jquery-logo.png" alt="">
         </div>
         <div class="col s6 m4 l4">
-          <img class="img-skills" src="assets/img/jquery-logo.png" alt="">
+          <img class="img-skills responsive-img" src="assets/img/bootstrap-logo.png" alt="">
         </div>
         <div class="col s6 m4 l4">
-          <img class="img-skills" src="assets/img/bootstrap-logo.png" alt="">
+          <img class="img-skills responsive-img" src="assets/img/materialize-logo.png" alt="">
+        </div>
+      </div>  
+      <div class="row">  
+        <div class="col s6 m4 l4">
+          <img class="img-skills responsive-img" src="assets/img/sass-logo.png" alt="">
         </div>
         <div class="col s6 m4 l4">
-          <img class="img-skills" src="assets/img/materialize-logo.png" alt="">
+          <!-- <img class="img-skills responsive-img" src="assets/img/react-logo.png" alt=""> -->
         </div>
         <div class="col s6 m4 l4">
-          <img class="img-skills" src="assets/img/sass-logo.png" alt="">
-        </div>
-        <div class="col s6 m4 l4">
-          <!-- <img class="img-skills" src="assets/img/react-logo.png" alt=""> -->
-        </div>
-        <div class="col s6 m4 l4">
-          <!-- <img class="img-skills" src="assets/img/angular-logo.png" alt=""> -->
+          <!-- <img class="img-skills responsive-img" src="assets/img/angular-logo.png" alt=""> -->
         </div>
       </div>
     </div>
@@ -110,7 +114,7 @@
         </div>
         <div>
           <div class="col s12 m4 l4">
-            <div class="card">
+            <div class="card rotator" data-rotate-y="270deg" data-move-x="-150%">
               <div class="card-image">
                 <img src="assets/img/ejemplo.gif">
                 <span class="card-title">Card Title</span>
@@ -127,9 +131,9 @@
         </div>
         <div>
           <div class="col s12 m4 l4">
-            <div class="card">
+            <div class="card rotator" data-rotate-y="270deg" data-move-x="100%">
               <div class="card-image">
-                <img src="assets/img/ejemplo.gif">
+                <img class="responsive-img" src="assets/img/ejemplo.gif">
                 <span class="card-title">Card Title</span>
               </div>
               <div class="card-content">
@@ -144,9 +148,9 @@
         </div>
         <div>
           <div class="col s12 m4 l4">
-            <div class="card">
+            <div class="card rotator" data-rotate-y="270deg" data-move-x="150%">
               <div class="card-image">
-                <img src="assets/img/ejemplo.gif">
+                <img class="responsive-img" src="assets/img/ejemplo.gif">
                 <span class="card-title">Card Title</span>
               </div>
               <div class="card-content">
@@ -161,9 +165,9 @@
         </div>
         <div>
             <div class="col s12 m4 l4">
-                <div class="card">
+                <div class="card rotator" data-rotate-y="270deg" data-move-x="-150%"> 
                   <div class="card-image">
-                    <img src="assets/img/ejemplo.gif">
+                    <img class="responsive-img" src="assets/img/ejemplo.gif">
                     <span class="card-title">Card Title</span>
                   </div>
                   <div class="card-content">
@@ -178,9 +182,9 @@
         </div>
         <div>
           <div class="col s12 m4 l4">
-            <div class="card">
+            <div class="card rotator" data-rotate-y="270deg" data-move-x="100%">
               <div class="card-image">
-                <img src="assets/img/ejemplo.gif">
+                <img class="responsive-img" src="assets/img/ejemplo.gif">
                 <span class="card-title">Card Title</span>
               </div>
               <div class="card-content">
@@ -195,9 +199,9 @@
         </div>
         <div>
           <div class="col s12 m4 l4">
-            <div class="card">
+            <div class="card rotator" data-rotate-y="270deg" data-move-x="150%">
               <div class="card-image">
-                <img src="assets/img/ejemplo.gif">
+                <img class="responsive-img" src="assets/img/ejemplo.gif">
                 <span class="card-title">Card Title</span>
               </div>
               <div class="card-content">
@@ -244,6 +248,7 @@
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="assets/js/smoove.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>
