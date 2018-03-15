@@ -1,4 +1,12 @@
 $(document).ready(function(){
+  $(".p2").typed({
+    strings: ["CYNTHIA", "FRONTEND", "DEVELOPER", "GAMER"],
+    typeSpeed: 50,
+    backSpeed: 10,
+    backDelay: 2000,
+    showCursor: false,
+    loop: true
+  });
   $('.parallax').parallax();
   $('.rotator').smoove({
     offset:'40%'
@@ -22,13 +30,15 @@ $(document).ready(function(){
   });
   
   $(function(){
-    $('a[href*="#"]').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var $target = $(this.hash);
-        $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-        if ($target.length) {
-          var targetOffset = $target.offset().top;
-          $('html,body').animate({scrollTop: targetOffset}, 1000);
+    // smooth scroll to div
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
           return false;
         }
       }
