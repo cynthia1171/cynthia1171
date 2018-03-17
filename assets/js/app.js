@@ -1,183 +1,274 @@
-$(document).ready(function(){
+$(document).ready(function() {
+  $(".p2").typed({
+    strings: ["CYNTHIA", "FRONTEND", "DEVELOPER", "GAMER"],
+    typeSpeed: 50,
+    backSpeed: 10,
+    backDelay: 2000,
+    showCursor: false,
+    loop: true
+  });
+  $(".rotator").smoove({
+    offset: "40%"
+  });
 
-  /* efecto del slider */
-  var w = (c.width = window.innerWidth),
-    h = (c.height = window.innerHeight),
-    ctx = c.getContext("2d"),
-    minDist = 10,
-    maxDist = 30,
-    initialWidth = 10,
-    maxLines = 100,
-    initialLines = 4,
-    speed = 5,
-    lines = [],
-    frame = 0,
-    timeSinceLast = 0,
-    dirs = [// straight x, y velocity
-      [0, 1], [1, 0], [0, -1], [-1, 0], // diagonals, 0.7 = sin(PI/4) = cos(PI/4)
-      [0.7, 0.7], [0.7, -0.7], [-0.7, 0.7], [-0.7, -0.7]],
-    starter = { // starting parent line, just a pseudo line
+  /* funcion particles de slider */
 
-      x: w / 2, y: h / 2, vx: 0, vy: 0, width: initialWidth };
+  var particleNumber = 75;
+  // number of particles (change it!)
 
-  function init() {
-    lines.length = 0;
+  window.requestAnimFrame = (function() {
+    return (
+      window.requestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      function(callback) {
+        window.setTimeout(callback, 1000 / 60);
+      }
+    );
+  })();
+  // requesting the keyframes
 
-    for (var i = 0; i < initialLines; ++i) lines.push(new Line(starter));
+  var c = document.getElementById("c");
+  var ctx = c.getContext("2d");
+  //context and id of canvas
 
-    ctx.fillStyle = "#222";
-    ctx.fillRect(0, 0, w, h);
+  var w = window.innerWidth;
+  var h = window.innerHeight;
+  //width and height of canvas
 
-    // if you want a cookie ;)
-    // ctx.lineCap = 'round';
-  }
-  function getColor(x) {
-    return "hsl( hue, 80%, 50% )".replace("hue", x / w * 360 + frame);
-  }
-  function anim() {
-    window.requestAnimationFrame(anim);
+  c.width = w;
+  c.height = h;
+  //setting the width and height for canvas
 
-    ++frame;
+  var mouse = { x: w / 2, y: h / 2 };
+  //mouse position
 
-    ctx.shadowBlur = 0;
-    ctx.fillStyle = "rgba(0,0,0,.02)";
-    ctx.fillRect(0, 0, w, h);
-    ctx.shadowBlur = 0.5;
+  document.addEventListener(
+    "mousemove",
+    function(e) {
+      mouse.x = e.clientX || e.pageX;
+      mouse.y = e.clientY || e.pageY;
+    },
+    false
+  );
+  //finding the mouse position
 
-    for (var i = 0; i < lines.length; ++i) if (lines[i].step()) {
-        // if true it's dead
+  //when clicked, the set-up function runs
+  document.addEventListener(
+    "mouseover",
+    function() {
+      var particleNumber = 75;
 
-        lines.splice(i, 1);
-        --i;
+      var particles = [];
+      // the particles storage
+
+      for (i = 0; i < particleNumber; i++) {
+        setTimeout(function() {
+          particles.push(new createParticle());
+        }, i * 10);
+        // add a particle (not all at once - setTimeout(); )
+      }
+      // adding 55 particles
+
+      function createParticle() {
+        this.x = mouse.x;
+        this.y = mouse.y;
+        // the x and y
+
+        this.vx = Math.random() * 8 - 4;
+        this.vy = Math.random() * 8 - 4;
+        // the velocities
+
+        this.size = 20;
+        // the size
+
+        this.life = Math.random() * 100;
+        // the life
+
+        var g = "rgba(46, 204, 113,1.0)";
+        var gg = "rgba(46, 204, 113,0.45)";
+        var ggg = "rgba(46, 204, 113,0.2)";
+        var array = [g, gg, ggg];
+        this.color = array[Math.floor(Math.random() * 3)];
+        // making 3 mandatory colors (change it and fork - i might use that!)
+
+        this.reset = function() {
+          // the reset
+
+          this.x = mouse.x;
+          this.y = mouse.y;
+          this.vx = Math.random() * 8 - 4;
+          this.vy = Math.random() * 8 - 4;
+          this.size = 20;
+          this.life = Math.random() * 33;
+        };
       }
 
-    // spawn new
+      function draw() {
+        requestAnimFrame(draw);
+        // requesting the keyframes
 
-    ++timeSinceLast;
+        ctx.fillStyle = "#262626";
+        ctx.fillRect(0, 0, c.width, c.height);
+        // the canvas
 
-    if (lines.length < maxLines && timeSinceLast > 10 && Math.random() < 0.5) {
-      timeSinceLast = 0;
+        for (t = 0; t < particles.length; t++) {
+          var p = particles[t];
+          // using the particle we want to use
 
-      lines.push(new Line(starter));
+          ctx.beginPath();
+          ctx.fillStyle = p.color;
+          ctx.fillRect(p.x, p.y, p.size, p.size);
+          // making the particle
 
-      // cover the middle;
-      ctx.fillStyle = ctx.shadowColor = getColor(starter.x);
+          p.x += p.vx;
+          p.y += p.vy;
+          // velocities
+
+          p.life *= 0.9;
+          p.size *= 0.89999;
+          // making the life and size decrease
+
+          if (p.life < 1) {
+            p.reset();
+          }
+          // reseting the particles when dead
+        }
+      }
+
+      draw();
+      // calling draw
+    },
+    false
+  );
+
+  //                 //
+  // background code //
+  //                 //
+
+  var particles = [];
+  // the particles storage
+
+  for (i = 0; i < particleNumber; i++) {
+    setTimeout(function() {
+      particles.push(new createParticle());
+    }, i * 15);
+    // add a particle (not all at once - setTimeout(); )
+  }
+  // adding 55 particles
+
+  function createParticle() {
+    this.x = Math.random() * c.width;
+    this.y = Math.random() * c.height;
+    // the x and y
+
+    this.vx = Math.random() * 8 - 4;
+    this.vy = Math.random() * 8 - 4;
+    // the velocities
+
+    this.size = 20;
+    // the size
+
+    this.life = Math.random() * 100;
+    // the life
+
+    var g = "rgba(46, 204, 113,1.0)";
+    var gg = "rgba(46, 204, 113,0.45)";
+    var ggg = "rgba(46, 204, 113,0.2)";
+    var array = [g, gg, ggg];
+    this.color = array[Math.floor(Math.random() * 3)];
+    // making 3 mandatory colors (change it and fork - i might use that!)
+
+    this.reset = function() {
+      // the reset
+
+      this.x = Math.random() * c.width;
+      this.y = Math.random() * c.height;
+      this.vx = Math.random() * 8 - 4;
+      this.vy = Math.random() * 8 - 4;
+      this.size = 20;
+      this.life = Math.random() * 33;
+    };
+  }
+
+  function draw() {
+    requestAnimFrame(draw);
+    // requesting the keyframes
+
+    ctx.fillStyle = "#262626";
+    ctx.fillRect(0, 0, c.width, c.height);
+    // the canvas
+
+    for (t = 0; t < particles.length; t++) {
+      var p = particles[t];
+      // using the particle we want to use
+
       ctx.beginPath();
-      ctx.arc(starter.x, starter.y, initialWidth, 0, Math.PI * 2);
-      ctx.fill();
+      ctx.fillStyle = p.color;
+      ctx.fillRect(p.x, p.y, p.size, p.size);
+      // making the particle
+
+      p.x += p.vx;
+      p.y += p.vy;
+      // velocities
+
+      p.life *= 0.9;
+      p.size *= 0.89999;
+      // making the life and size decrease
+
+      if (p.life < 1) {
+        p.reset();
+      }
+      // reseting the particles when dead
     }
   }
 
-  function Line(parent) {
-    this.x = parent.x | 0;
-    this.y = parent.y | 0;
-    this.width = parent.width / 1.25;
+  draw();
 
-    do {
-      var dir = dirs[(Math.random() * dirs.length) | 0];
-      this.vx = dir[0];
-      this.vy = dir[1];
-    } while ((this.vx === -parent.vx && this.vy === -parent.vy) || (this.vx === parent.vx && this.vy === parent.vy));
+  /* fin slider */
 
-    this.vx *= speed;
-    this.vy *= speed;
+  $(".button-collapse").sideNav();
+  $(".scrollspy").scrollSpy();
 
-    this.dist = Math.random() * (maxDist - minDist) + minDist;
-  }
-  Line.prototype.step = function() {
-    var dead = false;
+  $(".ir-arriba").click(function() {
+    $("body, html").animate(
+      {
+        scrollTop: "0px"
+      },
+      500
+    );
+  });
 
-    var prevX = this.x,
-      prevY = this.y;
-
-    this.x += this.vx;
-    this.y += this.vy;
-
-    --this.dist;
-
-    // kill if out of screen
-    if (this.x < 0 || this.x > w || this.y < 0 || this.y > h) dead = true;
-
-    // make children :D
-    if (this.dist <= 0 && this.width > 1) {
-      // keep yo self, sometimes
-      this.dist = Math.random() * (maxDist - minDist) + minDist;
-
-      // add 2 children
-      if (lines.length < maxLines) lines.push(new Line(this));
-      if (lines.length < maxLines && Math.random() < 0.5) lines.push(new Line(this));
-
-      // kill the poor thing
-      if (Math.random() < 0.2) dead = true;
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 0) {
+      $(".ir-arriba").slideDown(100);
+    } else {
+      $(".ir-arriba").slideUp(100);
     }
-
-    ctx.strokeStyle = ctx.shadowColor = getColor(this.x);
-    ctx.beginPath();
-    ctx.lineWidth = this.width;
-    ctx.moveTo(this.x, this.y);
-    ctx.lineTo(prevX, prevY);
-    ctx.stroke();
-
-    if (dead) return true;
-  };
-
-  init();
-  anim();
-
-  window.addEventListener("resize", function() {
-    w = c.width = window.innerWidth;
-    h = c.height = window.innerHeight;
-    starter.x = w / 2;
-    starter.y = h / 2;
-
-    init();
   });
 
-  /* fin del efecto */
-
-  $('.button-collapse').sideNav({
-    menuWidth: 170,
-    edge: 'left',
-    closeOnClick: true,
-    draggable: true
-  });
-  $('.parallax').parallax();
-  $('.rotator').smoove({
-    offset:'40%'
-  });
-  $('.scrollspy').scrollSpy();
-
-  $('.ir-arriba').click(function(){
-		$('body, html').animate({
-			scrollTop: '0px'
-		}, 500);
-	});
- 
-	$(window).scroll(function(){
-		if( $(this).scrollTop() > 0 ){
-			$('.ir-arriba').slideDown(100);
-		} else {
-			$('.ir-arriba').slideUp(100);
-		}
-  });
-  
-  $(function(){
-    $('a[href*="#"]').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var $target = $(this.hash);
-        $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-        if ($target.length) {
-          var targetOffset = $target.offset().top;
-          $('html,body').animate({scrollTop: targetOffset}, 1000);
+  $(function() {
+    // smooth scroll to div
+    $("a[href*=#]:not([href=#])").click(function() {
+      if (
+        location.pathname.replace(/^\//, "") ==
+          this.pathname.replace(/^\//, "") &&
+        location.hostname == this.hostname
+      ) {
+        var target = $(this.hash);
+        target = target.length
+          ? target
+          : $("[name=" + this.hash.slice(1) + "]");
+        if (target.length) {
+          $("html,body").animate(
+            {
+              scrollTop: target.offset().top
+            },
+            1000
+          );
           return false;
         }
       }
     });
   });
-
-  var year = document.getElementById('year')
-  copyright = new Date();
-  update = copyright.getFullYear();
-  year.innerHTML = update;
 });
-
