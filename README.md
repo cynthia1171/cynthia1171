@@ -1,11 +1,7 @@
-# Portafolio
+# Cynthia Isla
 
-## Paleta de Colores
+Soy una web developer apasionada por lo que hace, comprometida, orientada al logro de objetivos y proactiva. Me encantan los desafíos, sobretodo cuando se tratan de adquirir nuevos conocimientos, a los que me aboco por completo aprendiendo con rapidez.
 
-![Paleta de Colores](http://drive.google.com/uc?export=view&id=1Nnv9MEoytlcy8ZgjkMNUOPsYbO5qilAs)
+## Portafolio
 
-## Boceto del portafolio
-
-![Parte 1](http://drive.google.com/uc?export=view&id=1GIQAEMoMZWRiQp2bt4zP_aBwhUP4n9ec)
-
-![Parte 2](http://drive.google.com/uc?export=view&id=1uOA6ikBkfN4ZANTAyXksvO46Jc-ZDimj)
+http://cynthia1171.github.io
