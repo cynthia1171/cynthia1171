@@ -7,7 +7,7 @@ $(document).ready(function() {
   });
   $(".tooltipped").tooltip({ delay: 50 });
   $(".p2").typed({
-    strings: ["CYNTHIA", "FRONTEND", "DEVELOPER", "GAMER"],
+    strings: ["CYNTHIA", "FRONTEND", "DEVELOPER", "GAMER", "AMATEUR SINGER"],
     typeSpeed: 50,
     backSpeed: 10,
     backDelay: 2000,
