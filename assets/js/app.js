@@ -181,4 +181,9 @@ $(document).ready(function() {
       }
     });
   });
+
+  var year = document.getElementById('year')
+  copyright = new Date();
+  update = copyright.getFullYear();
+  year.innerHTML = update;
 });

@@ -149,6 +149,8 @@ canvas {
 
 #about .contenedor #mytext {
   margin-top: 6em;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 #about .contenedor #myimg {
@@ -159,7 +161,7 @@ canvas {
 
 #skills {
   width: 100%;
-  height: auto;
+  height: 100vh;
   padding-top: 6rem;
   background-color: #262626;
 }
@@ -210,6 +212,16 @@ canvas {
   color: #61dafb;
 }
 
+#cont-illust {
+  background-color: #ff7c00;
+  width: 116px;
+}
+
+#illustrator {
+  font-size: 8em;
+  color: #1c0a00;
+}
+
 #angular {
   font-size: 8em;
   color: #c4473a;
@@ -225,8 +237,21 @@ canvas {
 
 /*estilo contacto*/
 #contact {
-  height: 100vh;
+  height: auto;
   padding-top: 6rem;
+  background-color: #262626;
+}
+
+#contact h4 {
+  color: #fff;
+}
+
+#contenedor {
+  margin-top: 1em;
+}
+
+.info {
+  margin-top: 2em;
 }
 
 #contact .cont-icon {
@@ -239,16 +264,36 @@ canvas {
 #contact a i {
   font-size: 2.6rem;
   margin-top: 14px;
-  color: #000;
+  color: #fff;
 }
 
+.icon-contact-what {
+  width: 142px;
+  margin-top: 9px;
+  margin-left: -36px;
+}
 
 .icon-contact{
-  width: 34px;
+  width: 142px;
   margin-top: 25px;
+  margin-top: 1px;
+  margin-left: -27px;
 }
 
 .link-redes {
-  color: #000!important;
+  color: #fff!important;
   font-size: 18px;
+}
+
+/*estilo footer*/
+
+footer {
+  background-color: #000;
+  height: 100px;
+  margin-top: -20px;
+}
+
+footer #foo {
+  color: #22968b;
+  padding-top: 2em;
 }
