@@ -1,3 +1,7 @@
+.logo {
+  color: #22968b!important;
+}
+
 .ir-arriba {
   display: none;
   padding: 10px;
@@ -11,6 +15,14 @@
 
 nav {
   background-color: #000000 !important;
+}
+
+nav li a{
+  color: #22968b!important;
+}
+
+nav li:hover {
+  background-color: #0c3632;
 }
 
 /*estilos slider*/
@@ -46,7 +58,6 @@ canvas {
 .inner-text {
   margin-top: 2em;
   position: absolute;
-  z-index: 1000;
   margin-left: 25px;
   color: #ecf0f1;
   font-size: 33px;
@@ -118,7 +129,7 @@ canvas {
   font-weight: 900;
   margin: 0;
   line-height: 1;
-  color: rgb(255, 255, 255);
+  color: #22968b;
 }
 
 @media only screen and (max-width: 465px) {
@@ -142,4 +153,102 @@ canvas {
 
 #about .contenedor #myimg {
   margin-top: 5em;
+}
+
+/*estilos skill*/
+
+#skills {
+  width: 100%;
+  height: auto;
+  padding-top: 6rem;
+  background-color: #262626;
+}
+
+#skills #titulo {
+  margin-bottom: 4em;
+  color: #fff;
+}
+
+#html5 {
+  font-size: 8em;
+  color: #ff2500;
+}
+
+#css3 {
+  font-size: 8em;
+  color: #1f99ca;
+}
+
+#js {
+  font-size: 8em;
+  color: #ffa700;
+}
+
+#jquery {
+  font-size: 8em;
+  color: #0070ff;
+}
+
+#bootstrap {
+  font-size: 8em;
+  color: #59407f;
+}
+
+#materialize {
+  width: 12em;
+  margin-left: -19px;
+  margin-top: 28px;
+}
+
+#sass {
+  font-size: 8em;
+  color: #cc6699;
+}
+
+#react {
+  font-size: 8em;
+  color: #61dafb;
+}
+
+#angular {
+  font-size: 8em;
+  color: #c4473a;
+}
+
+/*estilo project*/
+#proyect {
+  height: auto;
+  padding-top: 6rem;
+}
+
+
+
+/*estilo contacto*/
+#contact {
+  height: 100vh;
+  padding-top: 6rem;
+}
+
+#contact .cont-icon {
+  width: 6em;
+  height: 6em;
+  background-color: #22968b;
+  display: block;
+}
+
+#contact a i {
+  font-size: 2.6rem;
+  margin-top: 14px;
+  color: #000;
+}
+
+
+.icon-contact{
+  width: 34px;
+  margin-top: 25px;
+}
+
+.link-redes {
+  color: #000!important;
+  font-size: 18px;
 }

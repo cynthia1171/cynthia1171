@@ -1,58 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Portafolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   <link rel="stylesheet" href="assets/icomoon/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
-
   <a class="icon-arrow-up ir-arriba btn-floating red"></a>
-  <header class="navbar-fixed">
-    <nav>
-      <div class="container">
-        <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">Logo</a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse">
-            <span class="icon-menu"></span>
-          </a>
-          <ul class="right hide-on-med-and-down">
-            <li>
-              <a href="#about">Acerca de mí</a>
-            </li>
-            <li>
-              <a href="#skills">Habilidades</a>
-            </li>
-            <li>
-              <a href="#proyect">Proyectos</a>
-            </li>
-            <li>
-              <a href="#contact">Contacto</a>
-            </li>
-          </ul>
-          <ul class="side-nav" id="mobile-demo">
-            <li>
-              <a href="#about">Acerca de mí</a>
-            </li>
-            <li>
-              <a href="#skills">Habilidades</a>
-            </li>
-            <li>
-              <a href="#proyect">Proyectos</a>
-            </li>
-            <li>
-              <a href="#contact">Contacto</a>
-            </li>
-          </ul>
+  <header>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#" data-activates="slide-out" class="button-collapse">
+              <i class="material-icons">menu</i>
+            </a>
+            <a href="#" class="brand-logo logo">
+              Cynthia
+              <!--<img class="responsive-img" src="assets/img/logo.png" alt="">-->
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li>
+                <a href="#about">Acerca de mí</a>
+              </li>
+              <li>
+                <a href="#skills">Habilidades</a>
+              </li>
+              <li>
+                <a href="#proyect">Projectos</a>
+              </li>
+              <li>
+                <a href="#contact">Contacto</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
+    <ul id="slide-out" class="side-nav">
+      <li>
+        <a href="#about">Acerca de mí</a>
+      </li>
+      <li>
+        <a href="#skills">Habilidades</a>
+      </li>
+      <li>
+        <a href="#proyect">Projectos</a>
+      </li>
+      <li>
+        <a href="#contact">Contacto</a>
+      </li>
+    </ul>
   </header>
   <!-- fin header -->
 
@@ -74,8 +79,8 @@
         <div id="mytext" class="col s12 m6 l6">
           <h4>Acerca de mí</h4>
           <p>Soy Cynthia Isla, tengo 29 años, vivo en Santiago, me encantan los videos juegos y ver series :) y soy una Frontend
-            Developer apasionada por lo que hace, comprometida, orientada al logro de objetivos y proactiva. Me encantan
-            los desafíos, sobretodo cuando se tratan de adquirir nuevos conocimientos, a los que me aboco por completo aprendiendo
+            Developer apasionada por lo que hace, comprometida, orientada al logro de objetivos y proactiva. Me encantan los
+            desafíos, sobretodo cuando se tratan de adquirir nuevos conocimientos, a los que me aboco por completo aprendiendo
             con rapidéz.
           </p>
         </div>
@@ -89,6 +94,248 @@
   </section>
   <!-- fin de seccion about-->
 
+  <!-- seccion habilidades -->
+  <section id="skills" class="section scrollspy">
+    <div class="container">
+      <div class="row">
+        <div id="titulo">
+          <h4>Habilidades</h4>
+        </div>
+        <div class="col s4 m4 l4">
+          <div class="container">
+            <i id="html5" class="cbp-ig-icon devicon-html5-plain tooltipped" data-position="right" data-delay="50" data-tooltip="HTML5">
+            </i>
+          </div>
+        </div>
+        <div class="col s4 m4 l4">
+          <div class="container">
+            <i id="css3" class="cbp-ig-icon devicon-css3-plain tooltipped" data-position="right" data-delay="50" data-tooltip="CSS3"></i>
+          </div>
+        </div>
+        <div class="col s4 m4 l4">
+          <div class="container">
+            <i id="js" class="cbp-ig-icon devicon-javascript-plain tooltipped" data-position="right" data-delay="50" data-tooltip="JAVASCRIPT"></i>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s4 m4 l4">
+          <div class="container">
+            <i id="jquery" class="cbp-ig-icon devicon-jquery-plain tooltipped" data-position="right" data-delay="50" data-tooltip="JQUERY"></i>
+          </div>
+        </div>
+        <div class="col s4 m4 l4">
+          <div class="container">
+            <i id="bootstrap" class="cbp-ig-icon devicon-bootstrap-plain tooltipped" data-position="right" data-delay="50" data-tooltip="BOOTSTRAP"></i>
+          </div>
+        </div>
+        <div class="col s4 m4 l4">
+          <div class="container">
+            <img class="responsive-img tooltipped" id="materialize" src="assets/img/materialize-logo.png" alt="" data-position="right"
+              data-delay="50" data-tooltip="MATERIALIZE">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s4 m4 l4">
+          <div class="container">
+            <i id="sass" class="cbp-ig-icon devicon-sass-original tooltipped" data-position="right" data-delay="50" data-tooltip="SASS"></i>
+          </div>
+        </div>
+        <div class="col s4 m4 l4">
+          <div class="container">
+            <i id="react" class="cbp-ig-icon devicon-react-original tooltipped" data-position="right" data-delay="50" data-tooltip="REACT"></i>
+          </div>
+        </div>
+        <div class="col s4 m4 l4">
+          <div class="container">
+            <!--<i id="angular" class="cbp-ig-icon devicon-angularjs-plain tooltipped" data-position="right" data-delay="50" data-tooltip="ANGULAR"></i>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- fin seccion habilidades -->
+
+  <!-- seccion proyectos -->
+  <section id="proyect" class="section scrollspy">
+    <div class="container">
+      <div class="row">
+        <div>
+          <h4>Proyectos</h4>
+        </div>
+        <div>
+          <div class="col s12 m4 l4">
+            <div class="card">
+              <div class="card-image">
+                <img src="assets/img/portfolio/trivia.png">
+                <span class="card-title">Trivia</span>
+              </div>
+              <div class="card-content">
+                <p>Juego de trivia hecho con API de Open Trivia DB y Sass </p>
+              </div>
+              <div class="card-action">
+                <a href="https://cynthia1171.github.io/trivia/">Link del proyecto</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="col s12 m4 l4">
+            <div class="card">
+              <div class="card-image">
+                <img class="responsive-img" src="assets/img/portfolio/lab-car.png">
+                <span class="card-title">Lab-car</span>
+              </div>
+              <div class="card-content">
+                <p>Web hecha con Bootstrap 3.</p>
+              </div>
+              <div class="card-action">
+                <a href="https://cynthia1171.github.io/lab-car-boilerplate/">Link del proyecto</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="col s12 m4 l4">
+            <div class="card">
+              <div class="card-image">
+                <img class="responsive-img" src="assets/img/portfolio/easy-vreco.png">
+                <span class="card-title">Easy-Vreco</span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
+                  little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="https://cynthia1171.github.io/Easy-Vreco/">Link del proyecto</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="col s12 m4 l4">
+            <div class="card">
+              <div class="card-image">
+                <img class="responsive-img" src="assets/img/ejemplo.gif">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
+                  little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="col s12 m4 l4">
+            <div class="card">
+              <div class="card-image">
+                <img class="responsive-img" src="assets/img/ejemplo.gif">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
+                  little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="col s12 m4 l4">
+            <div class="card">
+              <div class="card-image">
+                <img class="responsive-img" src="assets/img/ejemplo.gif">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
+                  little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- fin seccion proyectos -->
+
+  <!-- seccion contacto -->
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div>
+          <h4>Contáctame</h4>
+        </div>
+        <div class="col s12 m6">
+          <div class="row">
+           <div class="col s4 m4">
+              <a class="btn btn-floating btn-large pulse cont-icon">
+                <img src="assets/img/whatsapp.png" alt="" srcset="" class="icon-contact">
+              </a>
+           </div>
+           <div class="col s4 m4">
+            <a class="link-redes" href="tel:+56967784708">+56967784708</a>
+           </div>
+          </div>
+          <div class="row">
+            <div class="col s4 m4">
+              <a class="btn btn-floating btn-large pulse cont-icon">
+                <i class="material-icons">email</i>
+              </a>
+            </div>
+            <div class="col s4 m4">
+              <a class="link-redes" href="mailto:c.isla1171@gmail.com">c.isla1171@gmail.com</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s4 m4">
+              <a class="btn btn-floating btn-large pulse cont-icon">
+                <img src="assets/img/linkedin.png" alt="" srcset="" class="icon-contact">
+              </a>
+            </div>
+            <div class="col s4 m4">
+              <a class="link-redes" href="http://www.linkedin.com/in/cynthiaisla">www.linkedin.com/in/cynthiaisla</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="row">
+            <div class="col s4 m4">
+              <a class="btn btn-floating btn-large pulse cont-icon">
+                <img src="assets/img/github.png" alt="" srcset="" class="icon-contact">
+              </a>
+            </div>
+            <div class="col s4 m4">
+              <a class="link-redes" href="https://github.com/cynthia1171">github.com/cynthia1171</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s4 m4">
+              <a class="btn btn-floating btn-large pulse cont-icon">
+                <i class="material-icons">cloud</i>
+              </a>
+            </div>
+            <div class="col s4 m4">
+              <a class="link-redes" href="assets/cv/CynthiaIsla-Frontend.pdf" download>Descarga mi currículum aquí</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- fin seccion contacto -->
+
+
   <!-- inicio footer -->
   <footer>
 
@@ -101,6 +348,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script src="assets/js/smoove.js"></script>
   <script src="assets/js/app.js"></script>
-</body>
+  </body>
 
 </html>
