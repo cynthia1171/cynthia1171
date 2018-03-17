@@ -2,6 +2,10 @@
   color: #22968b!important;
 }
 
+.verde {
+  color: #22968b;
+}
+
 .ir-arriba {
   display: none;
   padding: 10px;
@@ -306,5 +310,9 @@ footer #foo {
 @media only screen and (max-width: 605px) {
   #about {
     height: auto;
+  }
+
+  #materialize {
+    margin-left: 5px;
   }
 }
