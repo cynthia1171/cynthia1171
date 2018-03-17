@@ -297,3 +297,11 @@ footer #foo {
   color: #22968b;
   padding-top: 2em;
 }
+
+/* media queris*/
+
+@media only screen and (min-width: 400px) {
+  #about {
+    height: auto;
+  }
+}
