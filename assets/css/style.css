@@ -14,7 +14,7 @@
   cursor: pointer;
   position: fixed;
   bottom: 20px;
-  right: 90px;
+  right: 20px;
 }
 
 nav {
@@ -317,60 +317,50 @@ footer #foo {
   #html5 {
     font-size: 6em;
     color: #ff2500;
-    padding: 0.5em;
   }
 
   #css3 {
     font-size: 6em;
     color: #1f99ca;
-    padding: 0.5em;
   }
 
   #js {
     font-size: 6em;
     color: #ffa700;
-    padding: 0.5em;
   }
 
   #jquery {
     font-size: 6em;
     color: #0070ff;
-    padding: 0.5em;
   }
 
   #bootstrap {
     font-size: 6em;
     color: #59407f;
-    padding: 0.5em;
   }
 
   .margen-mat {
-    margin-left: 4em;
   }
 
   #materialize {
     width: 8em;
-    margin-left: -19px;
     margin-top: 28px;
-    padding: 0.5em;
   }
 
   #sass {
     font-size: 6em;
     color: #cc6699;
-    padding: 1.2em;
+    padding-left: 58px;
   }
 
   #react {
     font-size: 6em;
     color: #61dafb;
-    padding: 0.5em;
   }
 
   #cont-illust {
     background-color: #ff7c00;
     width: 85px;
-    margin-left: 45px;
   }
 
   #illustrator {
@@ -381,13 +371,11 @@ footer #foo {
   #git {
     font-size: 6em;
     color: #000;
-    padding: 0.5em;
   }
 
   #angular {
     font-size: 6em;
     color: #c4473a;
-    padding: 0.5em;
   }
 
   #foo {
