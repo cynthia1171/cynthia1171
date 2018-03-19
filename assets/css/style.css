@@ -19,7 +19,6 @@
 
 nav {
   background-color: #000000 !important;
-  width: 100%;
 }
 
 nav li a{
@@ -202,7 +201,7 @@ canvas {
 }
 
 #proyect img{
-  width: 291px;
+  width: 100%;
   height: 179px;
 }
 
@@ -281,19 +280,28 @@ footer #foo {
 }
 
 /* media queris*/
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (max-device-width: 319px) {
   #slider {
     display: none;
   }
-  .inner-text {
-    height: auto;
-    text-align: center;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 55px;
-    margin-top: 4em;
+  #about {
+    width: 100%;
   }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  nav {
+    width: 100%;
+  }
+
+  #slider {
+    display: none;
+  }
+
+  #about {
+    height: auto;
+  }
+
   #about .contenedor #mytext {
     margin-top: -50px;
   }
@@ -337,7 +345,7 @@ footer #foo {
   }
 
   .margen-mat {
-    margin-left: 2em;
+    margin-left: 4em;
   }
 
   #materialize {
