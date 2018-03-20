@@ -120,6 +120,7 @@ canvas {
   padding-top: 6rem;
   padding-bottom: 6rem;
   background-color: #262626;
+  text-align: center;
 }
 
 #skills .titulo {
@@ -349,9 +350,6 @@ footer #foo {
     color: #59407f;
   }
 
-  .margen-mat {
-  }
-
   #materialize {
     width: 8em;
     margin-top: 28px;
@@ -360,7 +358,7 @@ footer #foo {
   #sass {
     font-size: 6em;
     color: #cc6699;
-    padding-left: 58px;
+    padding-left: 99px;
   }
 
   #react {
@@ -371,6 +369,7 @@ footer #foo {
   #cont-illust {
     background-color: #ff7c00;
     width: 85px;
+    margin-left: 39px;
   }
 
   #illustrator {
@@ -381,6 +380,7 @@ footer #foo {
   #git {
     font-size: 6em;
     color: #000;
+    padding-left: 35px;
   }
 
   #github {
@@ -415,6 +415,10 @@ footer #foo {
     position: relative;
     top: 0.6em;
   }
+
+  .info {
+    padding-left: 50px;
+  }
 }
 
 
@@ -425,12 +429,43 @@ footer #foo {
     padding-left: 15px;
     padding-right: 15px;
     font-size: 55px;
-    margin-top: 4em;
+    margin-top: 5em;
+  }
+
+
+  #about {
+    height: auto;
+  }
+
+  #git {
+    padding-left: 45px;
+  }
+
+  #sass {
+    padding-left: 119px;
+  }
+
+  #cont-illust {
+    margin-left: 35px;
+  }
+
+  .info {
+    padding-left: 45px;
+  }
+
+  #mytext h4 {
+    text-align: center;
+  }
+
+  .titulo {
+    text-align: center;
   }
 }
 
 @media only screen and (min-device-width:600px) and (max-device-width:799px) {
-
+  #cont-illust {
+    margin-left: 25px;
+  }
 }
 
 @media only screen and (min-device-width:800px) and (max-device-width:967px) {
@@ -445,6 +480,10 @@ footer #foo {
 @media only screen and (min-device-width:1024px) {
   #about .contenedor #mytext p {
     font-size: 1.3em;
+  }
+
+  #cont-illust {
+    margin-left: 46px;
   }
 }
 
