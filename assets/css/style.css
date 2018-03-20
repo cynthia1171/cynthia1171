@@ -297,6 +297,7 @@ footer #foo {
   }
   #about {
     width: 100%;
+    height: auto;
   }
 }
 
@@ -369,7 +370,8 @@ footer #foo {
   #cont-illust {
     background-color: #ff7c00;
     width: 85px;
-    margin-left: 39px;
+    position: relative;
+    margin-left: 40px;
   }
 
   #illustrator {
@@ -432,11 +434,6 @@ footer #foo {
     margin-top: 5em;
   }
 
-
-  #about {
-    height: auto;
-  }
-
   #git {
     padding-left: 45px;
   }
@@ -446,7 +443,8 @@ footer #foo {
   }
 
   #cont-illust {
-    margin-left: 35px;
+    position: relative;
+    margin-left: 40px;
   }
 
   .info {
@@ -464,7 +462,8 @@ footer #foo {
 
 @media only screen and (min-device-width:600px) and (max-device-width:799px) {
   #cont-illust {
-    margin-left: 25px;
+    position: relative;
+    margin-left: 40px;
   }
 }
 
@@ -478,12 +477,16 @@ footer #foo {
 }
 
 @media only screen and (min-device-width:1024px) {
+  #about {
+    height: 100vh;
+  }
   #about .contenedor #mytext p {
     font-size: 1.3em;
   }
 
   #cont-illust {
-    margin-left: 46px;
+    position: relative;
+    margin-left: 43px;
   }
 }
 
