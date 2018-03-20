@@ -187,6 +187,16 @@ canvas {
   color: #000;
 }
 
+#github {
+  font-size: 8em;
+  color: #000;
+}
+
+#trello {
+  font-size: 8em;
+  color: #23719f;
+}
+
 #angular {
   font-size: 8em;
   color: #c4473a;
@@ -371,6 +381,16 @@ footer #foo {
   #git {
     font-size: 6em;
     color: #000;
+  }
+
+  #github {
+    font-size: 6em;
+    color: #000;
+  }
+
+  #trello {
+    font-size: 6em;
+    color: #23719f;
   }
 
   #angular {
