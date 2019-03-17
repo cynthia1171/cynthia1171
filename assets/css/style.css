@@ -200,7 +200,9 @@ canvas {
 #bitbucket{
   font-size: 8em;
 }
-
+#ionic {
+  width: 58%;
+}
 
 /*estilo project*/
 #proyect {
